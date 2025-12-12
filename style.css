@@ -577,6 +577,8 @@ section:first-of-type {
         max-height: 70vh;
         padding-bottom: 20px;
         -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+        /* Allow Horizontal Scroll! */
     }
 
     .project-card {
