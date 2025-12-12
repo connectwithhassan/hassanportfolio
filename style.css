@@ -433,8 +433,8 @@ section:first-of-type {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 1px solid var(--text-muted);
-    color: var(--text-muted);
+    border: 1px solid var(--accent);
+    color: var(--accent);
     font-size: 1.2rem;
     transition: var(--transition);
     background: transparent;
@@ -448,6 +448,21 @@ section:first-of-type {
     border-color: var(--accent);
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(100, 255, 218, 0.4);
+}
+
+/* Greeting & Footer Styles */
+.greeting {
+    color: #64ffda;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    margin-top: 60px;
+    /* Extra spacing */
+    color: #64ffda;
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
 }
 
 /* MOBILE RESPONSIVE TWEAKS (Keep "One Page" feel but fit content) */
