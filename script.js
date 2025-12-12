@@ -223,4 +223,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navLinks[index]) navLinks[index].classList.add("active");
     }
 
+    // --- FIX: Stop Propagation for internal scrollers ---
+    // This allows native scroll in .projects-grid / .skills-grid without Observer stealing it
+    const scrollers = document.querySelectorAll(".projects-grid, .skills-grid");
+    scrollers.forEach(el => {
+        el.addEventListener("touchstart", (e) => e.stopPropagation(), { passive: true });
+        el.addEventListener("touchmove", (e) => e.stopPropagation(), { passive: true });
+        el.addEventListener("wheel", (e) => e.stopPropagation(), { passive: true });
+    });
+
 });
